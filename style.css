@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea00 0%, #764ba2 100%);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.calculator {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(2, 0, 0, 0.3);
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    animation: slideIn 0.3s ease-out;
+} 
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.display {
+    background: #f0f0f0;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+    text-align: right;
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border: 2px solid #e0e0e0;
+}
+
+.previous-operand {
+    color: #999;
+    font-size: 18px;
+    height: 24px;
+    min-height: 24px;
+}
+
+.current-operand {
+    color: #333;
+    font-size: 32px;
+    font-weight: 600;
+    word-wrap: break-word;
+    word-break: break-all;
+    min-height: 40px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    padding: 18px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: #f0f0f0;
+    color: #333;
+}
+
+button:hover {
+    background: #e0e0e0;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.operator {
+    background: #66ea8e;
+    color: white;
+}
+
+.operator:hover {
+    background: #5568d3;
+}
+
+.equals {
+    background: #48bb78;
+    color: white;
+    grid-column: span 2;
+}
+
+.equals:hover {
+    background: #38a169;
+}
+
+.clear {
+    background: #000000;
+    color: white;
+    grid-column: span 2;
+}
+
+.clear:hover {
+    background: #3ee554;
+}
+
+.delete {
+    background: #ed8936;
+    color: white;
+}
+
+.delete:hover {
+    background: #dd6b20;
+}
+
+@media (max-width: 480px) {
+    .calculator {
+        padding: 20px;
+        max-width: 100%;
+        margin: 20px;
+    }
+
+    .display {
+        padding: 20px;
+        min-height: 70px;
+    }
+
+    .current-operand {
+        font-size: 28px;
+    }
+
+    button {
+        padding: 15px;
+        font-size: 16px;
+    }
+}

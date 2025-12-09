@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="display">
+            <div class="previous-operand" id="previousOperand"></div>
+            <div class="current-operand" id="currentOperand">0</div>
+        </div>
+        <div class="buttons">
+            <button class="clear" onclick="calculator.clear()">C</button>
+            <button class="delete" onclick="calculator.delete()">DEL</button>
+            <button class="operator" onclick="calculator.chooseOperation('÷')">÷</button>
+            <button onclick="calculator.chooseNumber('7')">7</button>
+            <button onclick="calculator.chooseNumber('8')">8</button>
+            <button onclick="calculator.chooseNumber('9')">9</button>
+            <button class="operator" onclick="calculator.chooseOperation('х')">көбөйтүү</button>
+            <button onclick="calculator.chooseNumber('4')">4</button>
+            <button onclick="calculator.chooseNumber('5')">5</button>
+            <button onclick="calculator.chooseNumber('6')">6</button>
+            <button class="operator" onclick="calculator.chooseOperation('-')">кемитүү</button>
+            <button onclick="calculator.chooseNumber('1')">1</button>
+            <button onclick="calculator.chooseNumber('2')">2</button>
+            <button onclick="calculator.chooseNumber('3')">3</button>
+            <button class="operator" onclick="calculator.chooseOperation('+')">+</button>
+            <button onclick="calculator.chooseNumber('0')">0</button>
+            <button onclick="calculator.chooseNumber('.')">.</button>
+            <button class="equals" onclick="calculator.compute()">=</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
